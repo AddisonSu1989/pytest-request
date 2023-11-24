@@ -1,0 +1,12 @@
+test_get_template:
+  # 期望结果,期望返回码,期望返回信息
+  # except_result, except_code, except_msg
+  - [True, 0, "查询成功"]
+test_register_success:
+  # 期望结果,期望返回码,期望返回信息
+  - [ "nihao",True, 10001, "hello world" ]
+
+test_register_failed:
+  # 期望结果,期望返回码,期望返回信息
+  # user_name, except_result, except_code, except_msg
+  - [ "used",True, 10001, "register failed" ]

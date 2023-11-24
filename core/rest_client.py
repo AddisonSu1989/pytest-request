@@ -9,6 +9,7 @@ class RestClient():
         self.api_root_url = api_root_url
         self.session = requests.session()
 
+
     def get(self, url, **kwargs):
         return self.request(url, "GET", **kwargs)
 
@@ -46,6 +47,8 @@ class RestClient():
             if json:
                 data = complexjson.dumps(json)
             return self.session.patch(url, data, **kwargs)
+
+
 
     def request_log(self, url, method, data=None, json=None, params=None, headers=None, files=None, cookies=None, **kwargs):
         logger.info("接口请求地址 ==>> {}".format(url))
